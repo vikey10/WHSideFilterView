@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E25DC7B2298E8B500B9F1EB /* 1558753470641232.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3E25DC7A2298E8B500B9F1EB /* 1558753470641232.mp4 */; };
 		FD02599D1EAB41C4005B3F95 /* WHFilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0259991EAB41C4005B3F95 /* WHFilterCollectionCell.swift */; };
 		FD02599E1EAB41C4005B3F95 /* WHFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD02599A1EAB41C4005B3F95 /* WHFilterTableViewCell.swift */; };
 		FD02599F1EAB41C4005B3F95 /* WHFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD02599B1EAB41C4005B3F95 /* WHFilterView.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E25DC7A2298E8B500B9F1EB /* 1558753470641232.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1558753470641232.mp4; sourceTree = "<group>"; };
 		FD0259991EAB41C4005B3F95 /* WHFilterCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHFilterCollectionCell.swift; sourceTree = "<group>"; };
 		FD02599A1EAB41C4005B3F95 /* WHFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHFilterTableViewCell.swift; sourceTree = "<group>"; };
 		FD02599B1EAB41C4005B3F95 /* WHFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHFilterView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				FD529E2B1EAA5FF8006149E6 /* Main.storyboard */,
 				FD529E2E1EAA5FF8006149E6 /* Assets.xcassets */,
 				FD529E301EAA5FF8006149E6 /* LaunchScreen.storyboard */,
+				3E25DC7A2298E8B500B9F1EB /* 1558753470641232.mp4 */,
 				FD529E331EAA5FF8006149E6 /* Info.plist */,
 			);
 			path = WHSideFilterViewDemo;
@@ -267,6 +270,7 @@
 			files = (
 				FD529E321EAA5FF8006149E6 /* LaunchScreen.storyboard in Resources */,
 				FD529E2F1EAA5FF8006149E6 /* Assets.xcassets in Resources */,
+				3E25DC7B2298E8B500B9F1EB /* 1558753470641232.mp4 in Resources */,
 				FD529E2D1EAA5FF8006149E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

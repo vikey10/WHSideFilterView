@@ -19,35 +19,12 @@ class WHMainFilterTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     var data =  Array<Dictionary<String,Array<String>>>()
     var selectedTypes = Array<NSMutableArray>()
     weak var delegate : WHMainFilterTableViewDelegate?
-    //MAKR:lazy var commitBtn resetBtn tableView
-    lazy var commitBtn : UIButton = {
-        let btn = UIButton.init(frame: CGRect.init(x:  self.frame.size.width/2, y: self.frame.size.height - 40 , width: self.frame.size.width/2, height: 40))
-        btn.setBackgroundImage(Utility.imageWithColor(color: UIColor.init(red: 251/255.0, green: 75/255.0, blue: 70/255.0, alpha: 1)), for: UIControlState.normal)
-        btn.setTitle("Commit", for: UIControlState.normal)
-        btn.setTitleColor(UIColor.white, for: UIControlState.normal)
-        return btn
-    }()
-    
-    lazy var resetBtn : UIButton = {
-        let btn = UIButton.init(frame: CGRect.init(x: 0 , y: self.frame.size.height - 40, width: self.frame.size.width/2, height: 40))
-        btn.setBackgroundImage(Utility.imageWithColor(color: UIColor.white), for: UIControlState.normal)
-        btn.setTitle("Reset", for: UIControlState.normal)
-        btn.setTitleColor(UIColor.black, for: UIControlState.normal)
-        return btn
-    }()
-    
-    lazy var tableView : UITableView = {
-        let tb = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height - 40), style: UITableViewStyle.grouped)
-        tb.separatorStyle = UITableViewCellSeparatorStyle.none
-        return tb
-    }()
-    
+   
 
      init(frame: CGRect,dataSource: Array<Dictionary<String,Array<String>>>,returnData : inout NSMutableArray) {
         super.init(frame: frame)
         self.data = dataSource
         self.configUI()
-        self.backgroundColor = UIColor.white
         self.commitBtn.addTarget(self, action: #selector(commitBtnClicked), for: UIControlEvents.touchUpInside)
         self.resetBtn.addTarget(self, action: #selector(resetBtnClicked), for: UIControlEvents.touchUpInside)
     }
@@ -90,7 +67,6 @@ class WHMainFilterTableView: UIView,UITableViewDelegate,UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.data.count
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -135,4 +111,28 @@ class WHMainFilterTableView: UIView,UITableViewDelegate,UITableViewDataSource {
         
         return str
    }
+    
+    //MAKR:lazy var commitBtn resetBtn tableView
+    lazy var commitBtn : UIButton = {
+        let btn = UIButton.init(frame: CGRect.init(x:  self.frame.size.width/2, y: self.frame.size.height - 40 , width: self.frame.size.width/2, height: 40))
+        btn.setBackgroundImage(Utility.imageWithColor(color: UIColor.init(red: 251/255.0, green: 75/255.0, blue: 70/255.0, alpha: 1)), for: UIControlState.normal)
+        btn.setTitle("Commit", for: UIControlState.normal)
+        btn.setTitleColor(UIColor.white, for: UIControlState.normal)
+        return btn
+    }()
+    
+    lazy var resetBtn : UIButton = {
+        let btn = UIButton.init(frame: CGRect.init(x: 0 , y: self.frame.size.height - 40, width: self.frame.size.width/2, height: 40))
+        btn.setBackgroundImage(Utility.imageWithColor(color: UIColor.white), for: UIControlState.normal)
+        btn.setTitle("Reset", for: UIControlState.normal)
+        btn.setTitleColor(UIColor.black, for: UIControlState.normal)
+        return btn
+    }()
+    
+    lazy var tableView : UITableView = {
+        let tb = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height - 40), style: UITableViewStyle.grouped)
+        tb.separatorStyle = UITableViewCellSeparatorStyle.none
+        return tb
+    }()
+    
 }

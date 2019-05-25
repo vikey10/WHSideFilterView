@@ -22,11 +22,13 @@ class WHFilterCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = 3
-        self.backgroundColor = UIColor.init(red: 244/255.0, green: 244/255.0, blue: 244/255.0, alpha: 1)
+        self.backgroundColor = UIColor.white
         self.selectedBackgroundView = UIImageView.init(image: Utility.imageWithColor(color: UIColor.init(red: 251/255.0, green: 75/255.0, blue: 70/255.0, alpha: 1)))
         self.selectedBackgroundView?.layer.cornerRadius = 3
+        self.selectedBackgroundView?.clipsToBounds = true
         self.contentView.addSubview(label)
     }
+    
     
     
     required init?(coder aDecoder: NSCoder) {

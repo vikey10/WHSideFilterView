@@ -26,6 +26,7 @@ class WHFilterTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollecti
     
     init(items:Array<String>,columCount:CGFloat, selectedIndex:inout NSMutableArray){
         super.init(style: UITableViewCellStyle.default, reuseIdentifier: "filterCell")
+        self.backgroundColor = UIColor.groupTableViewBackground
         self.selectionStyle = UITableViewCellSelectionStyle.none
         self.items = items
         self.selectedItems = selectedIndex
@@ -39,7 +40,7 @@ class WHFilterTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollecti
         self.mainCollectionView = UICollectionView.init(frame: CGRect.init(x: 2, y:  5, width: screen_width*0.85 - 4, height: CGFloat(rows*30+10 + (rows-1)*2) - 10), collectionViewLayout: self.flowLayout!)
         self.mainCollectionView?.delegate = self
         self.mainCollectionView?.dataSource = self
-        self.mainCollectionView?.backgroundColor = UIColor.white
+        self.mainCollectionView?.backgroundColor = UIColor.groupTableViewBackground
         self.mainCollectionView?.allowsMultipleSelection = true
         self.contentView.addSubview(self.mainCollectionView!)
         
@@ -98,7 +99,6 @@ class WHFilterTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollecti
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: filterCollectionReuseidentifier, for: indexPath) as! WHFilterCollectionCell
-        cell.layer.cornerRadius = 3
         if indexPath.row < self.items.count {
             cell.label.text = self.items[indexPath.row]
         }
